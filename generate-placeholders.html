@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Generate Placeholders</title>
+    <style>
+        body {
+            font-family: system-ui;
+            padding: 24px;
+            background: #F4F6F8
+        }
+
+        h3 {
+            margin: 24px 0 8px
+        }
+
+        a {
+            display: block;
+            margin: 4px 0;
+            color: #0B5FB5
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TopCraft Placeholder Generator</h1>
+    <p>Click each link to download. Rename the downloaded file to the exact filename shown.</p>
+    <div id="list"></div>
+    <script>
+        const files = [
+            // root
+            ["logo.png", 300, 100, "LOGO", "#0B5FB5"], ["favicon.png", 64, 64, "TC", "#0B5FB5"],
+            ["og-home.jpg", 1200, 630, "OG HOME", "#0B5FB5"], ["hero-home.jpg", 1920, 1080, "HERO", "#0B5FB5"],
+            // banners
+            ...["about", "why", "products", "accessories", "profiles", "refurbishment", "solutions", "projects", "clients", "contact", "privacy"]
+                .map(n => [`banners/${n}.jpg`, 1920, 700, n.toUpperCase(), "#1E2124"]),
+            // about
+            ...["plant-overview", "director", "about-collage"].map(n => [`about/${n}.jpg`, 800, 600, n.replace(/-/g, ' ').toUpperCase(), "#0B5FB5"]),
+            // why
+            ...["design", "manufacturing", "qc", "reuse", "support", "safety"].map(n => [`why/${n}.jpg`, 800, 560, n.toUpperCase(), "#1E2124"]),
+            // manufacturing
+            ...["plant-hero", "plant-overview", "assembly", "finished-panels", "gallery-1", "gallery-2", "gallery-3", "gallery-4"].map(n => [`manufacturing/${n}.jpg`, 800, 600, n.toUpperCase(), "#0B5FB5"]),
+            // products
+            ...["formwork-system", "formwork-system-hero", "formwork-1", "formwork-2", "formwork-3", "formwork-4", "columns-beams", "columns-beams-hero", "columns-beams-detail", "columns-beams-comparison", "deck-panels", "deck-panels-hero", "deck-detail", "accessories", "profiles", "refurbishment"].map(n => [`products/${n}.jpg`, 800, 600, n.replace(/-/g, ' ').toUpperCase(), "#0B5FB5"]),
+            // accessories
+            ...["alignment-jack", "beam-bar", "bks-patti", "bombay-nails", "hex-nut-tie-rod", "hole-bar", "long-pin", "l-pin", "ms-jally", "panel-puller", "pin-wedges", "props", "pvc-cone", "pvc-hard-sleeve", "pvc-sleeve-cover", "pvc-sleeve", "tie-puller", "tie-rod-wing-nut", "turn-buckle", "kicker-rocker", "wall-bracket", "wall-tie", "waller-bracket", "wing-nut", "u-jack", "pp-sheet", "polythene-roll"].map(n => [`accessories/${n}.jpg`, 400, 300, n.replace(/-/g, ' ').toUpperCase(), "#F4F6F8"]),
+            // solutions
+            ...["residential", "residential-hero", "residential-detail", "high-rise", "high-rise-hero", "high-rise-detail", "commercial", "commercial-hero", "commercial-detail", "infrastructure", "infrastructure-hero", "infrastructure-detail"].map(n => [`solutions/${n}.jpg`, 800, 600, n.replace(/-/g, ' ').toUpperCase(), "#0B5FB5"]),
+            // projects
+            ...[1, 2, 3, 4, 5, 6].map(i => [`projects/project-${i}.jpg`, 800, 600, `PROJECT ${i}`, "#1E2124"]),
+            // clients
+            ...["ncc", "njr", "dosti", "jmc", "madhure", "simplex", "nyati", "lt", "golden", "shapoorji", "abhijit", "jp", "cntc", "kothari", "lodha"].map(n => [`clients/${n}.png`, 300, 180, n.toUpperCase(), "#FFFFFF"]),
+            // certs
+            ...["iso", "msme", "gst", "quality"].map(n => [`certs/${n}.png`, 300, 180, n.toUpperCase(), "#FFFFFF"])
+        ];
+        const list = document.getElementById('list');
+        files.forEach(([name, w, h, label, bg]) => {
+            const fg = (bg === "#FFFFFF" || bg === "#F4F6F8") ? "#1E2124" : "#FFFFFF";
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+    <rect width="100%" height="100%" fill="${bg}"/>
+    <g opacity=".12" fill="${fg}">
+      <rect x="${w * 0.05}" y="${h * 0.55}" width="${w * 0.02}" height="${h * 0.3}"/>
+      <rect x="${w * 0.08}" y="${h * 0.4}" width="${w * 0.02}" height="${h * 0.45}"/>
+      <rect x="${w * 0.11}" y="${h * 0.25}" width="${w * 0.02}" height="${h * 0.6}"/>
+      <rect x="${w * 0.14}" y="${h * 0.45}" width="${w * 0.02}" height="${h * 0.4}"/>
+    </g>
+    <text x="50%" y="46%" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="${Math.min(w, h) * 0.09}" fill="${fg}">${label}</text>
+    <text x="50%" y="58%" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="${Math.min(w, h) * 0.035}" fill="${fg}" opacity=".6">${w} × ${h}</text>
+    <text x="50%" y="94%" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="${Math.min(w, h) * 0.028}" fill="${fg}" opacity=".45">TOPCRAFT ALUMINIUM FORMWORK</text>
+  </svg>`;
+            const a = document.createElement('a');
+            a.href = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+            a.download = name;
+            a.textContent = name + "  (" + w + "×" + h + ")";
+            list.appendChild(a);
+        });
+    </script>
+</body>
+
+</html>
