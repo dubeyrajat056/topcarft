@@ -51,45 +51,35 @@
 <body>
 
     <!-- ===== HEADER (identical on every page) ===== -->
-    <!-- Paste the reusable HEADER markup from above here -->
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <!-- Loader -->
     <div id="tcLoader" class="tc-loader" aria-hidden="true">
         <div class="tc-loader__bars"><span></span><span></span><span></span><span></span><span></span></div>
     </div>
-
-    <!-- TOP BAR -->
     <div class="topbar">
         <div class="container-tc">
             <div class="topbar__inner">
                 <div class="topbar__group">
-                    <a href="tel:+" data-href="phone" aria-label="Call TopCraft">
-                        <i class="bi bi-telephone-fill"></i><span class="topbar__link-label"
-                            data-config="phone">[Phone]</span>
-                    </a>
-                    <a href="mailto:+" data-href="email" aria-label="Email TopCraft">
-                        <i class="bi bi-envelope-fill"></i><span class="topbar__link-label"
-                            data-config="email">[Email]</span>
-                    </a>
+                    <a href="tel:+" data-href="phone" aria-label="Call TopCraft"><i
+                            class="bi bi-telephone-fill"></i><span class="topbar__link-label"
+                            data-config="phone">[Phone]</span></a>
+                    <a href="mailto:+" data-href="email" aria-label="Email TopCraft"><i
+                            class="bi bi-envelope-fill"></i><span class="topbar__link-label"
+                            data-config="email">[Email]</span></a>
                 </div>
                 <div class="topbar__group">
                     <span class="topbar__hours"><i class="bi bi-clock-fill me-1"></i><span data-config="hours">Mon –
                             Sat, 9:00 AM – 7:00 PM IST</span></span>
-                    <a href="#" data-href="whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-                        <i class="bi bi-whatsapp"></i><span class="topbar__link-label">WhatsApp</span>
-                    </a>
+                    <a href="#" data-href="whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i
+                            class="bi bi-whatsapp"></i><span class="topbar__link-label">WhatsApp</span></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- NAVBAR -->
     <header id="tcNav" class="tc-nav">
         <div class="container-tc">
             <div class="tc-nav__inner">
                 <a class="tc-logo" href="index.html" data-logo aria-label="TopCraft home"></a>
-
                 <nav class="tc-menu" aria-label="Primary">
                     <div class="tc-menu__item"><a class="tc-menu__link" href="index.html" aria-current="page">Home</a>
                     </div>
@@ -129,20 +119,16 @@
                     <div class="tc-menu__item"><a class="tc-menu__link" href="downloads.html">Downloads</a></div>
                     <div class="tc-menu__item"><a class="tc-menu__link" href="contact.html">Contact</a></div>
                 </nav>
-
                 <div class="tc-nav__actions">
                     <a href="contact.html" class="btn-tc btn-tc--primary tc-nav__cta">Get a Quote <i
                             class="bi bi-arrow-right"></i></a>
                     <button id="tcBurger" class="tc-burger" aria-label="Open menu" aria-controls="tcOffcanvas"
-                        aria-expanded="false">
-                        <i class="bi bi-list"></i>
-                    </button>
+                        aria-expanded="false"><i class="bi bi-list"></i></button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- OFF-CANVAS MOBILE MENU -->
     <div id="tcOffcanvas" class="tc-offcanvas" aria-hidden="true" role="dialog" aria-modal="true"
         aria-label="Mobile menu">
         <div class="tc-offcanvas__panel">
@@ -202,116 +188,167 @@
         </div>
     </div>
 
-
     <!-- ===== MAIN ===== -->
     <main id="main">
 
-        <!-- HERO -->
-        <section class="hero" aria-labelledby="heroTitle">
-            <div class="hero__bg">
-                <!-- REPLACE IMAGE: hero — construction site with aluminium formwork / high-rise -->
-                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=75"
-                    alt="High-rise construction site with formwork and tower cranes" width="1920" height="1080"
-                    fetchpriority="high">
-            </div>
-            <div class="hero__motif" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="container-tc">
-                <div class="hero__content">
-                    <span class="eyebrow eyebrow--light">Aluminium Formwork System</span>
-                    <h1 id="heroTitle">Building the Future with <span class="hl">Speed, Precision</span> &amp; Quality
-                    </h1>
-                    <p class="hero__lead">We don't just build formwork; we provide speed and strength to the foundation
-                        of modern construction.</p>
-                    <div class="hero__actions">
-                        <a href="contact.html" class="btn-tc btn-tc--primary btn-tc--lg">Get a Quote <i
-                                class="bi bi-arrow-right"></i></a>
-                        <a href="products.html" class="btn-tc btn-tc--ghost-light btn-tc--lg">Explore Products</a>
-                    </div>
-
-                    <div class="hero__stats" role="list">
-                        <div class="stat" role="listitem">
-                            <span class="stat__num"><span data-count="200" data-suffix="+">200+</span></span>
-                            <span class="stat__label">Reuses</span>
-                        </div>
-                        <div class="stat" role="listitem">
-                            <span class="stat__num"><span data-count="4" data-suffix="–7">4–7</span></span>
-                            <span class="stat__label">Days / Slab</span>
-                        </div>
-                        <div class="stat" role="listitem">
-                            <span class="stat__num"><span data-count="100" data-suffix="%">100%</span></span>
-                            <span class="stat__label">In-house QC</span>
-                        </div>
-                        <div class="stat" role="listitem">
-                            <span class="stat__num">Pan-India</span>
-                            <span class="stat__label">Supply</span>
-                        </div>
-                    </div>
+        <!-- ============================================================
+       1) HERO SLIDER (Bootstrap 5 carousel)
+       ============================================================ -->
+        <section class="hero-slider" aria-label="Featured">
+            <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000"
+                data-bs-pause="hover">
+                <!-- Slide indicators -->
+                <div class="carousel-indicators hero-slider__indicators">
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
                 </div>
-            </div>
-        </section>
 
-        <!-- TRUST STRIP / CLIENT MARQUEE -->
-        <section class="section--tight section--light" aria-label="Trusted by leading builders">
-            <div class="container-tc">
-                <p class="text-center mb-4 text-muted-2"
-                    style="font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;">
-                    Trusted by leading builders &amp; contractors
-                </p>
-                <div class="marquee" tabindex="0">
-                    <div class="marquee__track" id="clientMarqueeTrack"></div>
-                </div>
-            </div>
-        </section>
+                <div class="carousel-inner">
 
-        <!-- ABOUT PREVIEW -->
-        <section class="section" id="about-preview">
-            <div class="container-tc">
-                <div class="split">
-                    <div class="reveal">
-                        <div class="collage">
-                            <div class="collage__main">
-                                <!-- REPLACE IMAGE: about main — formwork panels at site -->
-                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=75"
-                                    alt="Aluminium formwork panels assembled at a construction site" loading="lazy"
-                                    width="1200" height="900">
+                    <!-- SLIDE 1 -->
+                    <div class="carousel-item active">
+                        <div class="hero-slide">
+                            <div class="hero-slide__bg">
+                                <!-- REPLACE IMAGE: hero slide 1 -->
+                                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=75"
+                                    alt="High-rise construction site with formwork and tower cranes" width="1920"
+                                    height="1080" fetchpriority="high">
                             </div>
-                            <div class="collage__badge">
-                                <strong>Trusted Formwork Manufacturer</strong>
-                                <span>Design · Manufacture · Supply · Support</span>
+                            <div class="hero-slide__motif" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="container-tc">
+                                <div class="hero-slide__content">
+                                    <span class="eyebrow eyebrow--light">Aluminium Formwork System</span>
+                                    <h1>Building the Future with <span class="hl">Speed, Precision</span> &amp; Quality
+                                    </h1>
+                                    <p class="hero-slide__lead">We don't just build formwork; we provide speed and
+                                        strength to the foundation of modern construction.</p>
+                                    <div class="hero-slide__actions">
+                                        <a href="contact.html" class="btn-tc btn-tc--primary btn-tc--lg">Get a Quote <i
+                                                class="bi bi-arrow-right"></i></a>
+                                        <a href="products.html" class="btn-tc btn-tc--ghost-light btn-tc--lg">Explore
+                                            Products</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="reveal">
-                        <span class="eyebrow">About TopCraft</span>
-                        <h2 class="section-title">A leading name in aluminium formwork for modern construction</h2>
-                        <p class="lead">TopCraft Aluminium Formwork System Pvt. Ltd. is a trusted name in the
-                            manufacturing, design and supply of high-quality aluminium formwork systems. We provide
-                            durable, efficient and reusable formwork solutions for residential, commercial and
-                            infrastructure projects.</p>
-                        <ul class="checklist">
-                            <li><i class="bi bi-check-circle-fill"></i><span>State-of-the-art manufacturing facility
-                                    with in-house quality control</span></li>
-                            <li><i class="bi bi-check-circle-fill"></i><span>Experienced engineers supporting every
-                                    project on time</span></li>
-                            <li><i class="bi bi-check-circle-fill"></i><span>Excellent concrete finish that minimises or
-                                    eliminates plastering</span></li>
-                            <li><i class="bi bi-check-circle-fill"></i><span>200+ reuse cycles with lightweight,
-                                    high-strength panels</span></li>
-                        </ul>
-                        <a href="about.html" class="btn-tc btn-tc--outline">Read More <i
-                                class="bi bi-arrow-right"></i></a>
+
+                    <!-- SLIDE 2 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide">
+                            <div class="hero-slide__bg">
+                                <!-- REPLACE IMAGE: hero slide 2 -->
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=75"
+                                    alt="Aluminium formwork panels assembled on site" width="1920" height="1080"
+                                    loading="lazy">
+                            </div>
+                            <div class="hero-slide__motif" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="container-tc">
+                                <div class="hero-slide__content">
+                                    <span class="eyebrow eyebrow--light">200+ Reuses Per Set</span>
+                                    <h2 class="hero-slide__h">Reusable formwork engineered for <span
+                                            class="hl">repetition</span></h2>
+                                    <p class="hero-slide__lead">Aluminium panels that hold their dimensions and finish
+                                        cycle after cycle — the same walls, the same slabs, the same result.</p>
+                                    <div class="hero-slide__actions">
+                                        <a href="aluminium-formwork-system.html"
+                                            class="btn-tc btn-tc--primary btn-tc--lg">See the System <i
+                                                class="bi bi-arrow-right"></i></a>
+                                        <a href="contact.html" class="btn-tc btn-tc--ghost-light btn-tc--lg">Request a
+                                            Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide">
+                            <div class="hero-slide__bg">
+                                <!-- REPLACE IMAGE: hero slide 3 -->
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=75"
+                                    alt="High-rise towers under construction" width="1920" height="1080" loading="lazy">
+                            </div>
+                            <div class="hero-slide__motif" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="container-tc">
+                                <div class="hero-slide__content">
+                                    <span class="eyebrow eyebrow--light">In-House Design &amp; Manufacturing</span>
+                                    <h2 class="hero-slide__h">From <span class="hl">drawings</span> to dispatch, under
+                                        one roof</h2>
+                                    <p class="hero-slide__lead">CAD/BIM layouts, precision cutting, welding and QC on
+                                        every panel — so cycle time stays predictable from floor to floor.</p>
+                                    <div class="hero-slide__actions">
+                                        <a href="manufacturing.html" class="btn-tc btn-tc--primary btn-tc--lg">Inside
+                                            the Plant <i class="bi bi-arrow-right"></i></a>
+                                        <a href="why-topcraft.html" class="btn-tc btn-tc--ghost-light btn-tc--lg">Why
+                                            TopCraft</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide">
+                            <div class="hero-slide__bg">
+                                <!-- REPLACE IMAGE: hero slide 4 -->
+                                <img src="https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=1920&q=75"
+                                    alt="Engineers reviewing formwork drawings on site" width="1920" height="1080"
+                                    loading="lazy">
+                            </div>
+                            <div class="hero-slide__motif" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span><span></span></div>
+                            <div class="container-tc">
+                                <div class="hero-slide__content">
+                                    <span class="eyebrow eyebrow--light">End-to-End Support</span>
+                                    <h2 class="hero-slide__h">Engineering support that <span class="hl">stands on
+                                            site</span></h2>
+                                    <p class="hero-slide__lead">Mock-up supervision, first-cycle guidance and technical
+                                        trouble-shooting — the TopCraft team is there when the first panels go up.</p>
+                                    <div class="hero-slide__actions">
+                                        <a href="contact.html" class="btn-tc btn-tc--primary btn-tc--lg">Talk to
+                                            Engineering <i class="bi bi-arrow-right"></i></a>
+                                        <a href="clients.html" class="btn-tc btn-tc--ghost-light btn-tc--lg">Our
+                                            Clients</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Arrows -->
+                <button class="carousel-control-prev hero-slider__arrow" type="button" data-bs-target="#heroSlider"
+                    data-bs-slide="prev" aria-label="Previous slide">
+                    <span class="hero-slider__arrow-icon"><i class="bi bi-arrow-left"></i></span>
+                </button>
+                <button class="carousel-control-next hero-slider__arrow" type="button" data-bs-target="#heroSlider"
+                    data-bs-slide="next" aria-label="Next slide">
+                    <span class="hero-slider__arrow-icon"><i class="bi bi-arrow-right"></i></span>
+                </button>
+
             </div>
         </section>
 
-        <!-- PRODUCTS GRID -->
-        <section class="section section--light" id="products-preview">
+        <!-- ============================================================
+       2) TOPCRAFT PRODUCTS
+       ============================================================ -->
+        <section class="section" id="products-preview">
             <div class="container-tc">
                 <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">What We Make</span>
+                    <span class="eyebrow">TopCraft Products</span>
                     <h2 class="section-title">Formwork products &amp; services</h2>
                     <p class="lead mx-auto">Everything needed for a monolithic, high-speed concrete cycle — designed,
                         manufactured and supported in-house.</p>
@@ -326,406 +363,390 @@
             </div>
         </section>
 
-        <!-- KEY BENEFITS (DARK) -->
-        <section class="section section--dark">
+        <!-- ============================================================
+       3) ABOUT US
+       ============================================================ -->
+        <section class="section section--light" id="about">
+            <div class="container-tc">
+                <div class="split">
+                    <div class="reveal">
+                        <div class="collage">
+                            <div class="collage__main">
+                                <!-- REPLACE IMAGE: about main -->
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=75"
+                                    alt="Aluminium formwork panels assembled at a construction site" loading="lazy"
+                                    width="1200" height="900">
+                            </div>
+                            <div class="collage__badge">
+                                <strong>Trusted Formwork Manufacturer</strong>
+                                <span>Design · Manufacture · Supply · Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <span class="eyebrow">About Us</span>
+                        <h2 class="section-title">A leading name in aluminium formwork for modern construction</h2>
+                        <p class="lead">TopCraft Aluminium Formwork System Pvt. Ltd. is a leading and trusted name in
+                            the manufacturing, design and supply of high-quality aluminium formwork systems for the
+                            modern construction industry.</p>
+                        <p>We provide durable, efficient and reusable formwork solutions for residential, commercial and
+                            infrastructure projects. Our state-of-the-art manufacturing facility and team of experienced
+                            engineers ensure that every project is completed on time with the highest standards of
+                            finishing.</p>
+                        <blockquote
+                            style="border-left:4px solid var(--tc-blue);padding-left:18px;margin:24px 0;font-style:italic;font-size:1.05rem;color:var(--tc-charcoal);">
+                            “We don't just build formwork; we provide speed and strength to the foundation of modern
+                            construction.”
+                        </blockquote>
+                        <a href="about.html" class="btn-tc btn-tc--outline">Read More <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       4) MANUFACTURING INFRASTRUCTURE
+       ============================================================ -->
+        <section class="section" id="manufacturing-infrastructure">
+            <div class="container-tc">
+                <div class="split split--reverse">
+                    <div class="reveal">
+                        <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                            <!-- REPLACE IMAGE: Plant Overview / Spacious Shed -->
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=75"
+                                alt="TopCraft plant overview — spacious shed and machinery" loading="lazy" width="1200"
+                                height="900">
+                        </div>
+                        <p class="text-muted-2 mt-2 mb-0" style="font-size:.8rem;text-align:center;">
+                            <em>Image: Plant Overview / Spacious Shed — insert photo of your expansive plant and
+                                machinery here.</em>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <span class="eyebrow">01 · Manufacturing Infrastructure</span>
+                        <h2 class="section-title">Machinery, skill and quality control under one roof</h2>
+                        <p class="lead">Our manufacturing unit is equipped with top-tier modern machinery, hydraulic
+                            presses, cutting and welding equipment. We have a skilled workforce and an in-house quality
+                            control system that ensures production meets international standards.</p>
+                        <ul class="checklist mb-0">
+                            <li><i class="bi bi-check-circle-fill"></i><span>Hydraulic presses and CNC-assisted
+                                    cutting</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Dedicated welding and finishing bays</span>
+                            </li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Skilled workforce trained for formwork
+                                    fabrication</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>In-house QC bay with inspection
+                                    checklists</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       5) OUR KEY PRODUCTS
+       ============================================================ -->
+        <section class="section section--light" id="key-products">
             <div class="container-tc">
                 <div class="text-center mb-5 reveal">
-                    <span class="eyebrow eyebrow--light">Why Aluminium Formwork</span>
-                    <h2 class="section-title section-title--light">Key benefits for your project</h2>
+                    <span class="eyebrow">02 · Our Key Products</span>
+                    <h2 class="section-title">Customised aluminium formwork panels</h2>
+                    <p class="lead mx-auto">We offer a complete range of custom and standard aluminium formwork panels
+                        and accessories to meet diverse project requirements.</p>
+                </div>
+
+                <!-- Two key products -->
+                <div class="grid grid-2" style="gap:24px;">
+                    <div class="reveal">
+                        <div class="card-tc h-100">
+                            <div class="img-wrap">
+                                <!-- REPLACE IMAGE: Wall & Slab Panels -->
+                                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=75"
+                                    alt="Wall and slab aluminium formwork panels" loading="lazy" width="1200"
+                                    height="750">
+                            </div>
+                            <div class="card-body-tc">
+                                <h3 class="card-title-tc">Wall &amp; Slab Panels</h3>
+                                <p class="card-text-tc mb-0">Lightweight, high durability and delivering an excellent
+                                    concrete finish — the backbone of the TopCraft monolithic system.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-tc h-100">
+                            <div class="img-wrap">
+                                <!-- REPLACE IMAGE: Beam & Column Formwork -->
+                                <img src="https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?auto=format&fit=crop&w=1200&q=75"
+                                    alt="Beam and column aluminium formwork" loading="lazy" width="1200" height="750">
+                            </div>
+                            <div class="card-body-tc">
+                                <h3 class="card-title-tc">Beam &amp; Column Formwork</h3>
+                                <p class="card-text-tc mb-0">Engineered to precise measurements for challenging
+                                    structural designs — adjustable column boxes and beam soffits sized to your
+                                    drawings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two image placeholders (finished panels & precision finishing) -->
+                <div class="grid grid-2 mt-4" style="gap:24px;">
+                    <div class="reveal">
+                        <div class="img-wrap img-wrap--4x3 rounded-tc">
+                            <!-- REPLACE IMAGE: Finished Aluminium Panels and Stacking -->
+                            <img src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1200&q=75"
+                                alt="Finished aluminium panels and stacking" loading="lazy" width="1200" height="900">
+                        </div>
+                        <p class="text-muted-2 mt-2 mb-0" style="font-size:.8rem;text-align:center;">
+                            <em>Image: Finished Aluminium Panels and Stacking — insert photo of systematically stocked
+                                finished panels here.</em>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <div class="img-wrap img-wrap--4x3 rounded-tc">
+                            <!-- REPLACE IMAGE: Precision Panel Finishing and Quality -->
+                            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=75"
+                                alt="Precision panel finishing and quality inspection" loading="lazy" width="1200"
+                                height="900">
+                        </div>
+                        <p class="text-muted-2 mt-2 mb-0" style="font-size:.8rem;text-align:center;">
+                            <em>Image: Precision Panel Finishing and Quality — insert photo of aluminium sheets and
+                                panel surfaces here.</em>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="products.html" class="btn-tc btn-tc--outline">See All Products <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       6) KEY BENEFITS (DARK)
+       ============================================================ -->
+        <section class="section section--dark" id="key-benefits">
+            <div class="container-tc">
+                <div class="text-center mb-5 reveal">
+                    <span class="eyebrow eyebrow--light">03 · Key Benefits</span>
+                    <h2 class="section-title section-title--light">Key benefits of TopCraft aluminium formwork</h2>
                 </div>
                 <div class="grid grid-5">
                     <div class="reveal">
                         <div class="feature-card card-tc">
                             <div class="feature-ico"><i class="bi bi-arrow-repeat"></i></div>
                             <h3 class="card-title-tc">High Repetitions</h3>
-                            <p>Reused 200+ times with consistent dimensional accuracy.</p>
+                            <p>Our formwork panels can be reused more than 200 times.</p>
                         </div>
                     </div>
                     <div class="reveal">
                         <div class="feature-card card-tc">
                             <div class="feature-ico"><i class="bi bi-speedometer2"></i></div>
                             <h3 class="card-title-tc">Rapid Cycle</h3>
-                            <p>Slab-to-slab in just 4 to 7 days on typical floor plates.</p>
+                            <p>Enables slab-to-slab casting within 4 to 7 days.</p>
                         </div>
                     </div>
                     <div class="reveal">
                         <div class="feature-card card-tc">
                             <div class="feature-ico"><i class="bi bi-brush"></i></div>
                             <h3 class="card-title-tc">Smooth Finish</h3>
-                            <p>Minimises or eliminates internal plastering after striking.</p>
+                            <p>Minimises or eliminates the need for internal plastering.</p>
                         </div>
                     </div>
                     <div class="reveal">
                         <div class="feature-card card-tc">
                             <div class="feature-ico"><i class="bi bi-feather"></i></div>
                             <h3 class="card-title-tc">Lightweight &amp; Strong</h3>
-                            <p>Manual assembly — no heavy cranes required on site.</p>
+                            <p>Easy manual assembly on site without the need for heavy cranes.</p>
                         </div>
                     </div>
                     <div class="reveal">
                         <div class="feature-card card-tc">
                             <div class="feature-ico"><i class="bi bi-currency-rupee"></i></div>
                             <h3 class="card-title-tc">Cost Effective</h3>
-                            <p>Real savings in labour, time and material waste.</p>
+                            <p>Significant savings in both labour costs and overall project time.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MANUFACTURING WORKFLOW -->
-        <section class="section">
+        <!-- ============================================================
+       7) MANUFACTURING WORKFLOW
+       ============================================================ -->
+        <section class="section" id="workflow">
             <div class="container-tc">
                 <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">How We Work</span>
+                    <span class="eyebrow">04 · Manufacturing Workflow</span>
                     <h2 class="section-title">From drawings to dispatch</h2>
                 </div>
-                <div class="timeline">
-                    <div class="timeline__item reveal">
-                        <div class="timeline__num">1</div>
-                        <h3 class="timeline__title">CAD / BIM Designing</h3>
-                        <p class="timeline__text">Precise 3D models and layouts prepared from your structural and
-                            architectural drawings.</p>
-                    </div>
-                    <div class="timeline__item reveal">
-                        <div class="timeline__num">2</div>
-                        <h3 class="timeline__title">Precision Cutting &amp; Welding</h3>
-                        <p class="timeline__text">Robotic and manual cutting and welding of high-grade aluminium alloys.
+
+                <div class="split mb-5">
+                    <div class="reveal">
+                        <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                            <!-- REPLACE IMAGE: Assembly, Workforce & Layout Work -->
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=75"
+                                alt="Assembly, workforce and layout work" loading="lazy" width="1200" height="900">
+                        </div>
+                        <p class="text-muted-2 mt-2 mb-0" style="font-size:.8rem;text-align:center;">
+                            <em>Image: Assembly, Workforce &amp; Layout Work — insert photo of floor assembly and
+                                artisans at work here.</em>
                         </p>
                     </div>
-                    <div class="timeline__item reveal">
-                        <div class="timeline__num">3</div>
-                        <h3 class="timeline__title">Quality Inspection</h3>
-                        <p class="timeline__text">Rigorous checking of every panel's surface, holes and dimensions.</p>
-                    </div>
-                    <div class="timeline__item reveal">
-                        <div class="timeline__num">4</div>
-                        <h3 class="timeline__title">Packing &amp; Dispatch</h3>
-                        <p class="timeline__text">Strapped and palletised packaging for safe delivery to your site.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHOLE-CHAIN SERVICES -->
-        <section class="section section--light">
-            <div class="container-tc">
-                <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">End-to-End Support</span>
-                    <h2 class="section-title">Whole-chain services</h2>
-                </div>
-                <div class="grid grid-4">
                     <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-clipboard-data"></i>
-                            <h4>Consultancy</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-cash-coin"></i>
-                            <h4>Quotation</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-pencil-square"></i>
-                            <h4>Customised Design</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-gear-wide-connected"></i>
-                            <h4>Manufacturing</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-truck"></i>
-                            <h4>Transportation</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-person-workspace"></i>
-                            <h4>On-site Technical Guidance</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-arrow-repeat"></i>
-                            <h4>Refurbishment</h4>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="service-tile"><i class="bi bi-headset"></i>
-                            <h4>After-sales Support</h4>
+                        <div class="timeline" style="grid-template-columns:1fr;gap:20px;">
+                            <div class="timeline__item" style="padding-left:64px;">
+                                <div class="timeline__num">1</div>
+                                <h3 class="timeline__title">CAD / BIM Designing</h3>
+                                <p class="timeline__text">Developing precise 3D models and layouts based on client
+                                    blueprints.</p>
+                            </div>
+                            <div class="timeline__item" style="padding-left:64px;">
+                                <div class="timeline__num">2</div>
+                                <h3 class="timeline__title">Precision Cutting &amp; Welding</h3>
+                                <p class="timeline__text">Robotic and manual cutting and welding of high-grade aluminium
+                                    alloys.</p>
+                            </div>
+                            <div class="timeline__item" style="padding-left:64px;">
+                                <div class="timeline__num">3</div>
+                                <h3 class="timeline__title">Quality Inspection</h3>
+                                <p class="timeline__text">Rigorous checking of every panel's surface, holes and
+                                    dimensions.</p>
+                            </div>
+                            <div class="timeline__item" style="padding-left:64px;">
+                                <div class="timeline__num">4</div>
+                                <h3 class="timeline__title">Packing &amp; Dispatch</h3>
+                                <p class="timeline__text">Strapped and palletised packaging ensuring safe delivery to
+                                    the site.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SOLUTIONS BY BUILDING TYPE -->
-        <section class="section">
+        <!-- ============================================================
+       8) CONTACT US
+       ============================================================ -->
+        <section class="section section--light" id="contact">
             <div class="container-tc">
                 <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">Solutions</span>
-                    <h2 class="section-title">Built for every type of project</h2>
-                </div>
-                <div class="grid grid-4">
-                    <a class="tile reveal" href="residential.html" aria-label="Residential solutions">
-                        <!-- REPLACE IMAGE: residential -->
-                        <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=75"
-                            alt="Residential apartment towers" loading="lazy" width="800" height="600">
-                        <div class="tile__caption">
-                            <h3>Residential</h3>
-                            <p>Apartments &amp; townships</p>
-                        </div>
-                    </a>
-                    <a class="tile reveal" href="high-rise.html" aria-label="High-rise solutions">
-                        <!-- REPLACE IMAGE: high-rise -->
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75"
-                            alt="High-rise commercial towers" loading="lazy" width="800" height="600">
-                        <div class="tile__caption">
-                            <h3>High-Rise</h3>
-                            <p>Tall towers &amp; podiums</p>
-                        </div>
-                    </a>
-                    <a class="tile reveal" href="commercial.html" aria-label="Commercial solutions">
-                        <!-- REPLACE IMAGE: commercial -->
-                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=75"
-                            alt="Modern commercial building" loading="lazy" width="800" height="600">
-                        <div class="tile__caption">
-                            <h3>Commercial</h3>
-                            <p>Offices &amp; retail</p>
-                        </div>
-                    </a>
-                    <a class="tile reveal" href="infrastructure.html" aria-label="Infrastructure solutions">
-                        <!-- REPLACE IMAGE: infrastructure -->
-                        <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=75"
-                            alt="Bridge and infrastructure construction" loading="lazy" width="800" height="600">
-                        <div class="tile__caption">
-                            <h3>Infrastructure</h3>
-                            <p>Bridges &amp; public works</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- FEATURED PROJECTS -->
-        <section class="section section--light">
-            <div class="container-tc">
-                <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">Featured Work</span>
-                    <h2 class="section-title">Recent projects</h2>
-                    <p class="lead mx-auto">Placeholder projects — replace with real site references in
-                        <code>data.js</code>.
-                    </p>
+                    <span class="eyebrow">05 · Contact Us</span>
+                    <h2 class="section-title">Talk to our formwork team</h2>
+                    <p class="lead mx-auto">Send drawings, request a quote or just ask a technical question — we aim to
+                        reply within one working day.</p>
                 </div>
 
-                <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="grid grid-3">
-                                <div class="card-tc">
-                                    <div class="img-wrap"><img
-                                            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=75"
-                                            alt="[Project Name]" loading="lazy" width="600" height="375"></div>
-                                    <div class="card-body-tc">
-                                        <h3 class="card-title-tc">[Project Name]</h3>
-                                        <p class="card-text-tc">[City, State] · [Area] sq.ft.</p>
-                                    </div>
-                                </div>
-                                <div class="card-tc">
-                                    <div class="img-wrap"><img
-                                            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75"
-                                            alt="[Project Name]" loading="lazy" width="600" height="375"></div>
-                                    <div class="card-body-tc">
-                                        <h3 class="card-title-tc">[Project Name]</h3>
-                                        <p class="card-text-tc">[City, State] · [Area] sq.ft.</p>
-                                    </div>
-                                </div>
-                                <div class="card-tc">
-                                    <div class="img-wrap"><img
-                                            src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=75"
-                                            alt="[Project Name]" loading="lazy" width="600" height="375"></div>
-                                    <div class="card-body-tc">
-                                        <h3 class="card-title-tc">[Project Name]</h3>
-                                        <p class="card-text-tc">[City, State] · [Area] sq.ft.</p>
+                <div class="row g-5 align-items-start">
+                    <!-- Contact details -->
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="card-tc" style="padding:22px;">
+                                <div style="display:flex;gap:14px;">
+                                    <div
+                                        style="width:48px;height:48px;border-radius:12px;background:rgba(11,95,181,.1);color:var(--tc-blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;">
+                                        <i class="bi bi-geo-alt-fill"></i></div>
+                                    <div>
+                                        <h3 class="card-title-tc" style="margin-bottom:6px;">Office &amp; Plant</h3>
+                                        <p class="mb-0 text-muted-2" style="font-size:.9rem;"><span
+                                                data-config="address">[Office &amp; Plant Address]</span></p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="grid grid-3">
-                                <div class="card-tc">
-                                    <div class="img-wrap"><img
-                                            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=75"
-                                            alt="[Project Name]" loading="lazy" width="600" height="375"></div>
-                                    <div class="card-body-tc">
-                                        <h3 class="card-title-tc">[Project Name]</h3>
-                                        <p class="card-text-tc">[City, State] · [Area] sq.ft.</p>
+                            <div class="card-tc" style="padding:22px;">
+                                <div style="display:flex;gap:14px;">
+                                    <div
+                                        style="width:48px;height:48px;border-radius:12px;background:rgba(11,95,181,.1);color:var(--tc-blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;">
+                                        <i class="bi bi-telephone-fill"></i></div>
+                                    <div>
+                                        <h3 class="card-title-tc" style="margin-bottom:6px;">Phone</h3>
+                                        <p class="mb-0 text-muted-2" style="font-size:.9rem;"><a href="tel:+"
+                                                data-href="phone" data-config="phone">[Phone]</a></p>
                                     </div>
                                 </div>
-                                <div class="card-tc">
-                                    <div class="img-wrap"><img
-                                            src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=75"
-                                            alt="[Project Name]" loading="lazy" width="600" height="375"></div>
-                                    <div class="card-body-tc">
-                                        <h3 class="card-title-tc">[Project Name]</h3>
-                                        <p class="card-text-tc">[City, State] · [Area] sq.ft.</p>
+                            </div>
+                            <div class="card-tc" style="padding:22px;">
+                                <div style="display:flex;gap:14px;">
+                                    <div
+                                        style="width:48px;height:48px;border-radius:12px;background:rgba(11,95,181,.1);color:var(--tc-blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;">
+                                        <i class="bi bi-envelope-fill"></i></div>
+                                    <div>
+                                        <h3 class="card-title-tc" style="margin-bottom:6px;">Email</h3>
+                                        <p class="mb-0 text-muted-2" style="font-size:.9rem;"><a href="mailto:+"
+                                                data-href="email" data-config="email">[Email]</a></p>
                                     </div>
                                 </div>
-                                <div class="card-tc">
-                                    <div class="img-wrap"><img
-                                            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=75"
-                                            alt="[Project Name]" loading="lazy" width="600" height="375"></div>
-                                    <div class="card-body-tc">
-                                        <h3 class="card-title-tc">[Project Name]</h3>
-                                        <p class="card-text-tc">[City, State] · [Area] sq.ft.</p>
+                            </div>
+                            <div class="card-tc" style="padding:22px;">
+                                <div style="display:flex;gap:14px;">
+                                    <div
+                                        style="width:48px;height:48px;border-radius:12px;background:rgba(11,95,181,.1);color:var(--tc-blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;">
+                                        <i class="bi bi-globe2"></i></div>
+                                    <div>
+                                        <h3 class="card-title-tc" style="margin-bottom:6px;">Website</h3>
+                                        <p class="mb-0 text-muted-2" style="font-size:.9rem;"><a href="#"
+                                                data-href="website" data-config="website">[Website]</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-tc" style="padding:22px;">
+                                <div style="display:flex;gap:14px;">
+                                    <div
+                                        style="width:48px;height:48px;border-radius:12px;background:rgba(11,95,181,.1);color:var(--tc-blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;">
+                                        <i class="bi bi-whatsapp"></i></div>
+                                    <div>
+                                        <h3 class="card-title-tc" style="margin-bottom:6px;">WhatsApp</h3>
+                                        <p class="mb-0 text-muted-2" style="font-size:.9rem;"><a href="#"
+                                                data-href="whatsapp" target="_blank" rel="noopener"
+                                                data-config="whatsapp">[WhatsApp number]</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-2 mt-4">
-                        <button class="btn-tc btn-tc--outline" type="button" data-bs-target="#projectsCarousel"
-                            data-bs-slide="prev" aria-label="Previous projects"><i
-                                class="bi bi-arrow-left"></i></button>
-                        <button class="btn-tc btn-tc--outline" type="button" data-bs-target="#projectsCarousel"
-                            data-bs-slide="next" aria-label="Next projects"><i class="bi bi-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- COMPARISON -->
-        <section class="section">
-            <div class="container-tc">
-                <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">Comparison</span>
-                    <h2 class="section-title">Aluminium formwork vs conventional timber / plywood</h2>
-                </div>
-                <div class="compare-wrap reveal">
-                    <table class="compare-table">
-                        <thead>
-                            <tr>
-                                <th>Factor</th>
-                                <th>Aluminium Formwork</th>
-                                <th>Timber / Plywood</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Reuse cycles</td>
-                                <td class="val-blue">200+ times</td>
-                                <td>6 – 10 times</td>
-                            </tr>
-                            <tr>
-                                <td>Slab-to-slab cycle</td>
-                                <td class="val-blue">4 – 7 days</td>
-                                <td>10 – 14 days</td>
-                            </tr>
-                            <tr>
-                                <td>Concrete finish</td>
-                                <td class="val-blue">Excellent — minimal plaster</td>
-                                <td>Fair — plaster required</td>
-                            </tr>
-                            <tr>
-                                <td>Labour</td>
-                                <td class="val-blue">Lower, semi-skilled</td>
-                                <td>Higher, skilled carpenters</td>
-                            </tr>
-                            <tr>
-                                <td>Material waste</td>
-                                <td class="val-blue">Minimal</td>
-                                <td>High</td>
-                            </tr>
-                            <tr>
-                                <td>Dimensional accuracy</td>
-                                <td class="val-blue">High &amp; consistent</td>
-                                <td>Varies</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="section section--light">
-            <div class="container-tc">
-                <div class="text-center mb-5 reveal">
-                    <span class="eyebrow">Testimonials</span>
-                    <h2 class="section-title">What our clients say</h2>
-                    <p class="lead mx-auto">Placeholder testimonials — replace with real quotes in
-                        <code>assets/js/data.js</code>.
-                    </p>
-                </div>
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
-                    <div class="carousel-inner" id="testimonialTrack"><!-- populated by main.js --></div>
-                    <div class="d-flex justify-content-center gap-2 mt-4">
-                        <button class="btn-tc btn-tc--outline" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="prev" aria-label="Previous testimonial"><i
-                                class="bi bi-arrow-left"></i></button>
-                        <button class="btn-tc btn-tc--outline" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="next" aria-label="Next testimonial"><i
-                                class="bi bi-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- QUICK ENQUIRY -->
-        <section class="section" id="enquiry">
-            <div class="container-tc">
-                <div class="split">
-                    <div class="reveal">
-                        <span class="eyebrow">Get in Touch</span>
-                        <h2 class="section-title">Request a quote or technical consultation</h2>
-                        <p class="lead">Share your drawings, BOQ or project requirements. Our engineering team will
-                            respond with layouts, quantities and lead time.</p>
-                        <ul class="checklist">
-                            <li><i class="bi bi-telephone-fill"></i><span data-config="phone">[Phone]</span></li>
-                            <li><i class="bi bi-envelope-fill"></i><span data-config="email">[Email]</span></li>
-                            <li><i class="bi bi-geo-alt-fill"></i><span data-config="address">[Office &amp; Plant
-                                    Address]</span></li>
-                            <li><i class="bi bi-clock-fill"></i><span data-config="hours">Mon – Sat, 9:00 AM – 7:00 PM
-                                    IST</span></li>
-                        </ul>
-                    </div>
-                    <div class="reveal">
+                    <!-- Enquiry form -->
+                    <div class="col-lg-7">
                         <div class="enquiry-box">
+                            <h3 class="section-title" style="font-size:var(--fs-h3);">Send us a message</h3>
+                            <p class="text-muted-2 mb-3" style="font-size:.9rem;">Fields marked * are required.</p>
                             <form data-tc-form novalidate>
                                 <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="qName">Full Name *</label>
-                                        <input class="form-control" id="qName" name="name" type="text" required
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="hName">Full Name *</label>
+                                        <input class="form-control" id="hName" name="name" type="text" required
                                             autocomplete="name">
                                         <div class="invalid-feedback">Please enter your name.</div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="qEmail">Email *</label>
-                                        <input class="form-control" id="qEmail" name="email" type="email" required
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="hEmail">Email *</label>
+                                        <input class="form-control" id="hEmail" name="email" type="email" required
                                             autocomplete="email" inputmode="email">
                                         <div class="invalid-feedback">Please enter a valid email.</div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="qPhone">Phone / WhatsApp *</label>
-                                        <input class="form-control" id="qPhone" name="phone" type="tel" required
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="hPhone">Phone / WhatsApp *</label>
+                                        <input class="form-control" id="hPhone" name="phone" type="tel" required
                                             autocomplete="tel" inputmode="tel">
                                         <div class="invalid-feedback">Please enter your phone number.</div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label class="form-label" for="qCompany">Company</label>
-                                        <input class="form-control" id="qCompany" name="company" type="text"
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="hCompany">Company</label>
+                                        <input class="form-control" id="hCompany" name="company" type="text"
                                             autocomplete="organization">
                                     </div>
                                     <div class="col-12">
-                                        <label class="form-label" for="qMsg">Message *</label>
-                                        <textarea class="form-control" id="qMsg" name="message" rows="4"
+                                        <label class="form-label" for="hMessage">Message *</label>
+                                        <textarea class="form-control" id="hMessage" name="message" rows="4"
                                             required></textarea>
                                         <div class="invalid-feedback">Please tell us briefly about your requirement.
                                         </div>
                                     </div>
                                     <div class="col-12 d-none">
-                                        <label for="qBot">Leave this field empty</label>
-                                        <input id="qBot" name="botcheck" type="text" tabindex="-1" autocomplete="off">
+                                        <label for="hBot">Leave this field empty</label>
+                                        <input id="hBot" name="botcheck" type="text" tabindex="-1" autocomplete="off">
                                     </div>
                                     <div class="col-12 d-flex flex-wrap gap-2">
                                         <button type="submit" class="btn-tc btn-tc--primary">Send Enquiry <i
@@ -747,9 +768,7 @@
 
     </main>
 
-    <!-- ===== PRE-FOOTER CTA + FOOTER + FLOATS (identical on every page) ===== -->
-    <!-- Paste the reusable FOOTER markup from above here -->
-    <!-- PRE-FOOTER CTA -->
+    <!-- ===== PRE-FOOTER CTA + FOOTER + FLOATS ===== -->
     <section class="cta-band">
         <div class="container-tc">
             <div class="cta-band__inner">
@@ -763,7 +782,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="tc-footer">
         <div class="container-tc">
             <div class="tc-footer__grid">
@@ -838,19 +856,239 @@
         </div>
     </footer>
 
-    <!-- FLOATS -->
-    <a href="#" data-href="whatsapp" target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-    <button id="tcBackTop" class="float-top" aria-label="Back to top">
-        <span></span><span></span><span></span>
-    </button>
-
+    <a href="#" data-href="whatsapp" target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp"><i
+            class="bi bi-whatsapp"></i></a>
+    <button id="tcBackTop" class="float-top" aria-label="Back to top"><span></span><span></span><span></span></button>
 
     <!-- ===== SCRIPTS ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/data.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+
+    <!-- ===== HERO SLIDER STYLES (page-scoped, so CSS file stays untouched) ===== -->
+    <style>
+        /* ---- Hero slider wrapper ---- */
+        .hero-slider {
+            position: relative;
+            background: var(--tc-charcoal);
+        }
+
+        .hero-slide {
+            position: relative;
+            min-height: 92vh;
+            /* fallback */
+            min-height: 92svh;
+            display: flex;
+            align-items: center;
+            background: var(--tc-charcoal);
+            color: #fff;
+            overflow: hidden;
+            padding-block: clamp(72px, 9vh, 140px);
+        }
+
+        .hero-slide__bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .55;
+        }
+
+        .hero-slide__bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(30, 33, 36, .95) 0%, rgba(30, 33, 36, .7) 45%, rgba(30, 33, 36, .25) 100%);
+        }
+
+        .hero-slide__motif {
+            position: absolute;
+            right: 4%;
+            bottom: 0;
+            z-index: 1;
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+            height: 60%;
+            opacity: .35;
+            pointer-events: none;
+        }
+
+        .hero-slide__motif span {
+            width: 18px;
+            background: var(--tc-blue-light);
+            border-radius: 2px 2px 0 0;
+        }
+
+        .hero-slide__motif span:nth-child(1) {
+            height: 35%;
+        }
+
+        .hero-slide__motif span:nth-child(2) {
+            height: 60%;
+        }
+
+        .hero-slide__motif span:nth-child(3) {
+            height: 45%;
+            background: var(--tc-blue);
+        }
+
+        .hero-slide__motif span:nth-child(4) {
+            height: 88%;
+        }
+
+        .hero-slide__motif span:nth-child(5) {
+            height: 70%;
+            background: var(--tc-blue);
+        }
+
+        .hero-slide__motif span:nth-child(6) {
+            height: 100%;
+        }
+
+        .hero-slide .container-tc {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-slide__content {
+            max-width: 820px;
+        }
+
+        .hero-slide h1,
+        .hero-slide__h {
+            color: #fff;
+            margin: 0 0 22px;
+            font-size: var(--fs-h1);
+            line-height: 1.1;
+        }
+
+        .hero-slide .hl {
+            color: var(--tc-blue-light);
+        }
+
+        .hero-slide__lead {
+            color: #D9DDE2;
+            font-size: var(--fs-lead);
+            max-width: 58ch;
+            margin: 0 0 32px;
+        }
+
+        .hero-slide__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* Carousel fade + smooth */
+        .carousel-fade .carousel-item {
+            transition: opacity .9s ease;
+        }
+
+        .carousel-fade .carousel-item.active,
+        .carousel-fade .carousel-item-next.carousel-item-start,
+        .carousel-fade .carousel-item-prev.carousel-item-end {
+            opacity: 1;
+        }
+
+        .carousel-fade .active.carousel-item-start,
+        .carousel-fade .active.carousel-item-end {
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .carousel-fade .carousel-item {
+                transition: none;
+            }
+        }
+
+        /* Indicators — small vertical bars matching the brand */
+        .hero-slider__indicators {
+            bottom: 24px;
+            gap: 8px;
+            margin: 0;
+            justify-content: center;
+        }
+
+        .hero-slider__indicators [data-bs-target] {
+            width: 32px;
+            height: 4px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, .35);
+            border: 0;
+            opacity: 1;
+            transition: background .2s ease, width .2s ease;
+        }
+
+        .hero-slider__indicators .active {
+            background: var(--tc-blue-light);
+            width: 44px;
+        }
+
+        /* Arrows */
+        .hero-slider__arrow {
+            width: 56px;
+            opacity: 1;
+        }
+
+        .hero-slider__arrow-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(30, 33, 36, .55);
+            border: 1px solid rgba(255, 255, 255, .25);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 1.2rem;
+            transition: background .2s ease;
+        }
+
+        .hero-slider__arrow:hover .hero-slider__arrow-icon {
+            background: var(--tc-blue);
+            border-color: var(--tc-blue);
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-slider__arrow {
+                display: none;
+            }
+
+            .hero-slide {
+                min-height: 80svh;
+                padding-block: 56px;
+            }
+
+            .hero-slide__motif {
+                display: none;
+            }
+
+            .hero-slide h1,
+            .hero-slide__h {
+                font-size: clamp(1.8rem, 1.1rem + 3vw, 2.4rem);
+            }
+
+            .hero-slide__lead {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-height: 520px) and (orientation: landscape) {
+            .hero-slide {
+                min-height: 0;
+                padding-block: 56px;
+            }
+
+            .hero-slide__motif {
+                display: none;
+            }
+        }
+    </style>
 </body>
 
 </html>
