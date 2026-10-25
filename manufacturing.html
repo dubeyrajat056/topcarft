@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Manufacturing & Technology | TopCraft Aluminium Formwork</title>
     <meta name="description"
-        content="Inside TopCraft's manufacturing facility — modern machinery, hydraulic presses, cutting and welding, skilled workforce, in-house quality control and dispatch.">
-    <meta property="og:title" content="Manufacturing & Technology | TopCraft">
+        content="Inside TopCraft's manufacturing plant: modern machinery, hydraulic presses, precision cutting and welding, in-house quality control, palletised dispatch and skilled workforce.">
+    <meta name="theme-color" content="#0B5FB5">
+    <link rel="canonical" href="[CANONICAL URL]/manufacturing.html">
     <meta property="og:type" content="website">
-    <link rel="icon" href="assets/img/favicon.png">
-    <link rel="canonical" href="https://www.example.com/manufacturing.html">
+    <meta property="og:title" content="TopCraft Manufacturing & Technology">
+    <meta property="og:description"
+        content="Modern machinery, skilled workforce and in-house QC — how TopCraft manufactures aluminium formwork to international standards.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=75">
+    <meta property="og:url" content="[CANONICAL URL]/manufacturing.html">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -24,360 +31,603 @@
 
 <body>
 
-    <div class="topbar d-none d-md-block">
-        <div class="container-tc d-flex flex-wrap justify-content-between align-items-center">
-            <div class="tb-list"><span><i class="bi bi-telephone-fill"></i><a href="tel:+910000000000"
-                        data-config-href="phoneHref" data-config="phone">[Enter Phone]</a></span><span><i
-                        class="bi bi-envelope-fill"></i><a href="mailto:email@example.com" data-config-href="email"
-                        data-config="email">[Enter Email]</a></span><span><i class="bi bi-clock-fill"></i><span
-                        data-config="hours">Mon – Sat · 9:00 AM – 6:30 PM</span></span></div>
-            <div><a href="https://wa.me/919876543210" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>
-                    WhatsApp Us</a></div>
+    <!-- ===== HEADER ===== -->
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="tcLoader" class="tc-loader" aria-hidden="true">
+        <div class="tc-loader__bars"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="topbar">
+        <div class="container-tc">
+            <div class="topbar__inner">
+                <div class="topbar__group">
+                    <a href="tel:+" data-href="phone" aria-label="Call TopCraft"><i
+                            class="bi bi-telephone-fill"></i><span class="topbar__link-label"
+                            data-config="phone">[Phone]</span></a>
+                    <a href="mailto:+" data-href="email" aria-label="Email TopCraft"><i
+                            class="bi bi-envelope-fill"></i><span class="topbar__link-label"
+                            data-config="email">[Email]</span></a>
+                </div>
+                <div class="topbar__group">
+                    <span class="topbar__hours"><i class="bi bi-clock-fill me-1"></i><span data-config="hours">Mon –
+                            Sat, 9:00 AM – 7:00 PM IST</span></span>
+                    <a href="#" data-href="whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i
+                            class="bi bi-whatsapp"></i><span class="topbar__link-label">WhatsApp</span></a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-tc">
+    <header id="tcNav" class="tc-nav">
         <div class="container-tc">
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="TopCraft logo" width="150"
-                    height="52"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
-                <ul class="navbar-nav align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                            data-bs-toggle="dropdown">About</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.html">Company</a></li>
-                            <li><a class="dropdown-item" href="why-topcraft.html">Why TopCraft</a></li>
-                            <li><a class="dropdown-item" href="manufacturing.html">Manufacturing & Technology</a></li>
+            <div class="tc-nav__inner">
+                <a class="tc-logo" href="index.html" data-logo aria-label="TopCraft home"></a>
+                <nav class="tc-menu" aria-label="Primary">
+                    <div class="tc-menu__item"><a class="tc-menu__link" href="index.html">Home</a></div>
+                    <div class="tc-menu__item">
+                        <a class="tc-menu__link" href="about.html">About <i class="bi bi-chevron-down"></i></a>
+                        <div class="tc-dropdown">
+                            <a href="about.html"><i class="bi bi-building"></i> Company</a>
+                            <a href="why-topcraft.html"><i class="bi bi-patch-check"></i> Why TopCraft</a>
+                            <a href="manufacturing.html" aria-current="page"><i class="bi bi-gear-wide-connected"></i>
+                                Manufacturing &amp; Technology</a>
+                        </div>
+                    </div>
+                    <div class="tc-menu__item">
+                        <a class="tc-menu__link" href="products.html">Products <i class="bi bi-chevron-down"></i></a>
+                        <div class="tc-dropdown">
+                            <a href="aluminium-formwork-system.html"><i class="bi bi-grid-3x3-gap"></i> Aluminium
+                                Formwork System</a>
+                            <a href="columns-beams.html"><i class="bi bi-bounding-box"></i> Columns &amp; Beams</a>
+                            <a href="slab-deck-panels.html"><i class="bi bi-layers"></i> Slab / Deck Panels</a>
+                            <a href="accessories.html"><i class="bi bi-tools"></i> Accessories</a>
+                            <a href="extrusion-profiles.html"><i class="bi bi-rulers"></i> Extrusion Profiles</a>
+                            <a href="refurbishment.html"><i class="bi bi-arrow-repeat"></i> Refurbishment &amp;
+                                Modification</a>
+                        </div>
+                    </div>
+                    <div class="tc-menu__item">
+                        <a class="tc-menu__link" href="solutions.html">Solutions <i class="bi bi-chevron-down"></i></a>
+                        <div class="tc-dropdown">
+                            <a href="residential.html"><i class="bi bi-house-door"></i> Residential</a>
+                            <a href="high-rise.html"><i class="bi bi-buildings"></i> High-Rise</a>
+                            <a href="commercial.html"><i class="bi bi-shop"></i> Commercial</a>
+                            <a href="infrastructure.html"><i class="bi bi-bridge"></i> Infrastructure</a>
+                        </div>
+                    </div>
+                    <div class="tc-menu__item"><a class="tc-menu__link" href="projects.html">Projects</a></div>
+                    <div class="tc-menu__item"><a class="tc-menu__link" href="clients.html">Clients</a></div>
+                    <div class="tc-menu__item"><a class="tc-menu__link" href="downloads.html">Downloads</a></div>
+                    <div class="tc-menu__item"><a class="tc-menu__link" href="contact.html">Contact</a></div>
+                </nav>
+                <div class="tc-nav__actions">
+                    <a href="contact.html" class="btn-tc btn-tc--primary tc-nav__cta">Get a Quote <i
+                            class="bi bi-arrow-right"></i></a>
+                    <button id="tcBurger" class="tc-burger" aria-label="Open menu" aria-controls="tcOffcanvas"
+                        aria-expanded="false"><i class="bi bi-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="tcOffcanvas" class="tc-offcanvas" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Mobile menu">
+        <div class="tc-offcanvas__panel">
+            <div class="tc-offcanvas__head">
+                <a class="tc-logo" href="index.html" data-logo aria-label="TopCraft home"></a>
+                <button id="tcOffcanvasClose" class="tc-offcanvas__close" aria-label="Close menu"><i
+                        class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="tc-offcanvas__body">
+                <ul class="tc-mobile-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#" data-sub>About <i class="bi bi-chevron-down"></i></a>
+                        <ul class="tc-mobile-sub">
+                            <li><a href="about.html"><i class="bi bi-building"></i>Company</a></li>
+                            <li><a href="why-topcraft.html"><i class="bi bi-patch-check"></i>Why TopCraft</a></li>
+                            <li><a href="manufacturing.html"><i class="bi bi-gear-wide-connected"></i>Manufacturing
+                                    &amp; Technology</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                            data-bs-toggle="dropdown">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="aluminium-formwork-system.html">Aluminium Formwork
-                                    System</a></li>
-                            <li><a class="dropdown-item" href="columns-beams.html">Columns & Beams</a></li>
-                            <li><a class="dropdown-item" href="slab-deck-panels.html">Slab / Deck Panels</a></li>
-                            <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
-                            <li><a class="dropdown-item" href="extrusion-profiles.html">Extrusion Profiles</a></li>
-                            <li><a class="dropdown-item" href="refurbishment.html">Refurbishment & Modification</a></li>
+                    <li>
+                        <a href="#" data-sub>Products <i class="bi bi-chevron-down"></i></a>
+                        <ul class="tc-mobile-sub">
+                            <li><a href="aluminium-formwork-system.html"><i class="bi bi-grid-3x3-gap"></i>Aluminium
+                                    Formwork System</a></li>
+                            <li><a href="columns-beams.html"><i class="bi bi-bounding-box"></i>Columns &amp; Beams</a>
+                            </li>
+                            <li><a href="slab-deck-panels.html"><i class="bi bi-layers"></i>Slab / Deck Panels</a></li>
+                            <li><a href="accessories.html"><i class="bi bi-tools"></i>Accessories</a></li>
+                            <li><a href="extrusion-profiles.html"><i class="bi bi-rulers"></i>Extrusion Profiles</a>
+                            </li>
+                            <li><a href="refurbishment.html"><i class="bi bi-arrow-repeat"></i>Refurbishment &amp;
+                                    Modification</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                            data-bs-toggle="dropdown">Solutions</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="solutions.html">All Solutions</a></li>
-                            <li><a class="dropdown-item" href="residential.html">Residential</a></li>
-                            <li><a class="dropdown-item" href="high-rise.html">High-Rise</a></li>
-                            <li><a class="dropdown-item" href="commercial.html">Commercial</a></li>
-                            <li><a class="dropdown-item" href="infrastructure.html">Infrastructure</a></li>
+                    <li>
+                        <a href="#" data-sub>Solutions <i class="bi bi-chevron-down"></i></a>
+                        <ul class="tc-mobile-sub">
+                            <li><a href="residential.html"><i class="bi bi-house-door"></i>Residential</a></li>
+                            <li><a href="high-rise.html"><i class="bi bi-buildings"></i>High-Rise</a></li>
+                            <li><a href="commercial.html"><i class="bi bi-shop"></i>Commercial</a></li>
+                            <li><a href="infrastructure.html"><i class="bi bi-bridge"></i>Infrastructure</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>
-                    <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item nav-cta"><a class="btn-tc btn-primary-tc" href="contact.html">Get a Quote <i
-                                class="bi bi-arrow-right"></i></a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <div class="tc-offcanvas__cta">
+                    <a href="contact.html" class="btn-tc btn-tc--primary btn-tc--block">Get a Quote <i
+                            class="bi bi-arrow-right"></i></a>
+                    <a href="#" data-href="whatsapp" target="_blank" rel="noopener"
+                        class="btn-tc btn-tc--outline btn-tc--block"><i class="bi bi-whatsapp"></i> WhatsApp Us</a>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
-        <div class="offcanvas-header"><img src="assets/img/logo.png" alt="TopCraft logo" width="130" height="45"><button
-                type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="why-topcraft.html">Why TopCraft</a></li>
-                <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing & Technology</a></li>
-                <li class="nav-item"><a class="nav-link" href="aluminium-formwork-system.html">Aluminium Formwork
-                        System</a></li>
-                <li class="nav-item"><a class="nav-link" href="columns-beams.html">Columns & Beams</a></li>
-                <li class="nav-item"><a class="nav-link" href="slab-deck-panels.html">Slab / Deck Panels</a></li>
-                <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
-                <li class="nav-item"><a class="nav-link" href="extrusion-profiles.html">Extrusion Profiles</a></li>
-                <li class="nav-item"><a class="nav-link" href="refurbishment.html">Refurbishment & Modification</a></li>
-                <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>
-                <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item mt-2"><a class="btn-tc btn-primary-tc w-100 justify-content-center"
-                        href="contact.html">Get a Quote</a></li>
-            </ul>
         </div>
     </div>
 
-    <!-- MFG HERO -->
-    <section class="mfg-hero">
-        <div class="hero-bg" style="background-image:url('assets/img/manufacturing/plant-hero.jpg')" role="img"
-            aria-label="TopCraft manufacturing plant"></div>
-        <div class="container-tc">
-            <span class="eyebrow">Manufacturing & Technology</span>
-            <h1>Where Precision is Manufactured</h1>
-            <p class="lead-tc" style="color:#C9D0D8">Our manufacturing unit is equipped with top-tier modern machinery,
-                hydraulic presses, cutting and welding equipment — backed by a skilled workforce and in-house quality
-                control that meets international standards.</p>
-        </div>
-    </section>
+    <!-- ===== MAIN ===== -->
+    <main id="main">
 
-    <!-- INFRASTRUCTURE -->
-    <section class="section">
-        <div class="container-tc">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 reveal"><span class="eyebrow">Manufacturing Infrastructure</span>
-                    <h2>Modern Machinery, Skilled Hands</h2>
-                    <p class="lead-tc">From hydraulic presses to precision cutting and welding stations, every stage is
-                        controlled under one roof.</p>
-                    <ul class="check-list">
-                        <li><i class="bi bi-check-circle-fill"></i> Hydraulic presses for accurate panel forming</li>
-                        <li><i class="bi bi-check-circle-fill"></i> CNC and manual cutting stations</li>
-                        <li><i class="bi bi-check-circle-fill"></i> MIG welding with jigs for repeatability</li>
-                        <li><i class="bi bi-check-circle-fill"></i> In-house QC lab and inspection benches</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Palletising and dispatch yard</li>
-                    </ul>
+        <!-- PAGE HERO (manufacturing — dark, industrial, image-as-background) -->
+        <section class="page-hero"
+            style="min-height:clamp(440px,72svh,680px);display:flex;align-items:flex-end;padding:0;">
+            <div style="position:absolute;inset:0;z-index:0;">
+                <!-- REPLACE IMAGE: plant hero -->
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=75"
+                    alt="TopCraft manufacturing plant interior"
+                    style="width:100%;height:100%;object-fit:cover;opacity:.55;" loading="lazy" width="1920"
+                    height="1080">
+                <div
+                    style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,33,36,.45) 0%,rgba(30,33,36,.95) 100%);">
                 </div>
-                <div class="col-lg-6 reveal"><img src="assets/img/manufacturing/plant-overview.jpg"
-                        alt="Plant overview — spacious shed" class="rounded shadow w-100" width="600" height="420"
-                        loading="lazy"><!-- REPLACE IMAGE: Plant Overview / Spacious Shed --></div>
             </div>
-        </div>
-    </section>
+            <div class="container-tc" style="position:relative;z-index:2;padding-block:clamp(48px,6vw,80px);">
+                <span class="eyebrow eyebrow--light">Manufacturing &amp; Technology</span>
+                <h1 style="color:#fff;max-width:820px;">Made to last — under one roof</h1>
+                <p style="color:#D9DDE2;max-width:70ch;">Modern machinery, hydraulic presses, precision cutting and
+                    welding, and an in-house QC system that checks every panel before dispatch.</p>
+                <div class="bar-motif bar-motif--white mt-4" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </section>
 
-    <!-- MACHINERY CARDS -->
-    <section class="section bg-light-tc">
-        <div class="container-tc">
-            <div class="text-center mb-5"><span class="eyebrow justify-content-center">Machinery</span>
-                <h2>Equipment That Delivers Repeatability</h2>
+        <nav class="breadcrumb-tc" aria-label="Breadcrumb">
+            <div class="container-tc">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="sep" aria-hidden="true"><i class="bi bi-chevron-right"></i></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="sep" aria-hidden="true"><i class="bi bi-chevron-right"></i></li>
+                    <li aria-current="page">Manufacturing</li>
+                </ol>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 reveal">
-                    <div class="tile">
-                        <div class="ico"><i class="bi bi-gear-fill"></i></div>
-                        <h5>Hydraulic Presses</h5>
-                        <p>Consistent panel forming with controlled pressure.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 reveal">
-                    <div class="tile">
-                        <div class="ico"><i class="bi bi-scissors"></i></div>
-                        <h5>Cutting Stations</h5>
-                        <p>Accurate profile and panel cutting to drawing dimensions.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 reveal">
-                    <div class="tile">
-                        <div class="ico"><i class="bi bi-lightning-charge"></i></div>
-                        <h5>Welding Jigs</h5>
-                        <p>MIG welding with fixtures for repeatable strength.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 reveal">
-                    <div class="tile">
-                        <div class="ico"><i class="bi bi-clipboard-check"></i></div>
-                        <h5>QC Benches</h5>
-                        <p>Surface, hole and dimensional inspection before dispatch.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- VERTICAL TIMELINE -->
-    <section class="section">
-        <div class="container-tc">
-            <div class="text-center mb-5"><span class="eyebrow justify-content-center">Workflow</span>
-                <h2>From CAD to Dispatch</h2>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="v-timeline">
-                        <div class="v-step reveal">
-                            <h5>1. CAD / BIM Designing</h5>
-                            <p>Precise 3D models and layouts from client blueprints. Shell plans, layouts, elevations,
-                                BOQ and fabrication drawings prepared and approved.</p>
-                        </div>
-                        <div class="v-step reveal">
-                            <h5>2. Precision Cutting & Welding</h5>
-                            <p>Robotic and manual cutting and welding of high-grade aluminium alloys, using jigs for
-                                repeatable accuracy.</p>
-                        </div>
-                        <div class="v-step reveal">
-                            <h5>3. Quality Inspection</h5>
-                            <p>Rigorous checking of every panel's surface, holes and dimensions against approved
-                                fabrication drawings.</p>
-                        </div>
-                        <div class="v-step reveal">
-                            <h5>4. Packing & Dispatch</h5>
-                            <p>Strapped and palletised packaging for safe delivery, with accessories itemised and packed
-                                separately.</p>
+        <!-- INFRASTRUCTURE OVERVIEW -->
+        <section class="section">
+            <div class="container-tc">
+                <div class="split">
+                    <div class="reveal">
+                        <span class="eyebrow">Our Plant</span>
+                        <h2 class="section-title">Manufacturing infrastructure</h2>
+                        <p class="lead">Our manufacturing unit is equipped with top-tier modern machinery, hydraulic
+                            presses, cutting and welding equipment. We have a skilled workforce and an in-house quality
+                            control system that ensures production meets international standards.</p>
+                        <ul class="checklist mb-0">
+                            <li><i class="bi bi-check-circle-fill"></i><span>Hydraulic presses and CNC-assisted
+                                    cutting</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Dedicated welding and finishing bays</span>
+                            </li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Skilled workforce trained for formwork
+                                    fabrication</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>In-house QC bay with inspection
+                                    checklists</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                            <!-- REPLACE IMAGE: plant interior -->
+                            <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&w=1200&q=75"
+                                alt="Spacious manufacturing shed with aluminium formwork line" loading="lazy"
+                                width="1200" height="900">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 reveal">
-                    <img src="assets/img/manufacturing/assembly.jpg" alt="Assembly — workforce and layout work"
-                        class="rounded shadow w-100 mb-3" width="500" height="330"
-                        loading="lazy"><!-- REPLACE IMAGE: Assembly / Workforce / Layout -->
-                    <img src="assets/img/manufacturing/finished-panels.jpg" alt="Finished panels and stacking"
-                        class="rounded shadow w-100" width="500" height="330"
-                        loading="lazy"><!-- REPLACE IMAGE: Finished Panels and Stacking -->
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- QC CHECKLIST -->
-    <section class="section bg-dark-tc">
-        <div class="container-tc">
-            <div class="text-center mb-5"><span class="eyebrow justify-content-center">Quality Control</span>
-                <h2>Every Panel Passes These Checks</h2>
+        <!-- MACHINERY CARDS -->
+        <section class="section section--light">
+            <div class="container-tc">
+                <div class="text-center mb-5 reveal">
+                    <span class="eyebrow">Equipment</span>
+                    <h2 class="section-title">Machinery &amp; capabilities</h2>
+                </div>
+                <div class="grid grid-4">
+                    <div class="reveal">
+                        <div class="card-tc h-100">
+                            <div class="card-body-tc">
+                                <div class="feature-ico"
+                                    style="background:rgba(11,95,181,.1);color:var(--tc-blue);width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;">
+                                    <i class="bi bi-cpu"></i></div>
+                                <h3 class="card-title-tc">Hydraulic Presses</h3>
+                                <p class="card-text-tc mb-0">Forming and pressing of aluminium profiles to exact
+                                    cross-section.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-tc h-100">
+                            <div class="card-body-tc">
+                                <div class="feature-ico"
+                                    style="background:rgba(11,95,181,.1);color:var(--tc-blue);width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;">
+                                    <i class="bi bi-scissors"></i></div>
+                                <h3 class="card-title-tc">Cutting Lines</h3>
+                                <p class="card-text-tc mb-0">CNC-assisted cutting for repeatable, burr-free panel
+                                    dimensions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-tc h-100">
+                            <div class="card-body-tc">
+                                <div class="feature-ico"
+                                    style="background:rgba(11,95,181,.1);color:var(--tc-blue);width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;">
+                                    <i class="bi bi-lightning-charge"></i></div>
+                                <h3 class="card-title-tc">Welding Bays</h3>
+                                <p class="card-text-tc mb-0">Manual and semi-automated welding with post-weld
+                                    inspection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="card-tc h-100">
+                            <div class="card-body-tc">
+                                <div class="feature-ico"
+                                    style="background:rgba(11,95,181,.1);color:var(--tc-blue);width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;">
+                                    <i class="bi bi-clipboard-check"></i></div>
+                                <h3 class="card-title-tc">In-house QC</h3>
+                                <p class="card-text-tc mb-0">Surface, hole, dimension and flatness checks on every
+                                    panel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 reveal">
-                    <div class="feature-card">
-                        <div class="ico"><i class="bi bi-bounding-box"></i></div>
-                        <h4>Surface Finish</h4>
-                        <p>Uniform surface free from dents, scratches or weld spatter.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal">
-                    <div class="feature-card">
-                        <div class="ico"><i class="bi bi-record-circle"></i></div>
-                        <h4>Hole Accuracy</h4>
-                        <p>Hole positions checked against fabrication drawings.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal">
-                    <div class="feature-card">
-                        <div class="ico"><i class="bi bi-rulers"></i></div>
-                        <h4>Dimensions</h4>
-                        <p>Length, width and squareness within tolerance.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal">
-                    <div class="feature-card">
-                        <div class="ico"><i class="bi bi-fire"></i></div>
-                        <h4>Welding Strength</h4>
-                        <p>Visual and mechanical verification of weld integrity.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal">
-                    <div class="feature-card">
-                        <div class="ico"><i class="bi bi-align-center"></i></div>
-                        <h4>Flatness</h4>
-                        <p>Panel flatness measured to ensure smooth concrete finish.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal">
-                    <div class="feature-card">
-                        <div class="ico"><i class="bi bi-box-seam"></i></div>
-                        <h4>Packing & Dispatch</h4>
-                        <p>Strapped, palletised and labelled for safe site delivery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- GALLERY -->
-    <section class="section">
-        <div class="container-tc">
-            <div class="text-center mb-5"><span class="eyebrow justify-content-center">Photo Gallery</span>
-                <h2>Inside the Plant</h2>
-            </div>
-            <div class="gallery-grid">
-                <a href="assets/img/manufacturing/gallery-1.jpg" class="glightbox"><img
-                        src="assets/img/manufacturing/gallery-1.jpg" alt="Precision panel finishing and quality"
-                        width="400" height="300" loading="lazy"></a>
-                <a href="assets/img/manufacturing/gallery-2.jpg" class="glightbox"><img
-                        src="assets/img/manufacturing/gallery-2.jpg" alt="Finished panels and stacking" width="400"
-                        height="300" loading="lazy"></a>
-                <a href="assets/img/manufacturing/gallery-3.jpg" class="glightbox"><img
-                        src="assets/img/manufacturing/gallery-3.jpg" alt="Assembly and workforce" width="400"
-                        height="300" loading="lazy"></a>
-                <a href="assets/img/manufacturing/gallery-4.jpg" class="glightbox"><img
-                        src="assets/img/manufacturing/gallery-4.jpg" alt="Plant overview spacious shed" width="400"
-                        height="300" loading="lazy"></a>
-            </div>
-        </div>
-    </section>
+        <!-- WORKFLOW (large vertical timeline with image per step) -->
+        <section class="section">
+            <div class="container-tc">
+                <div class="text-center mb-5 reveal">
+                    <span class="eyebrow">Workflow</span>
+                    <h2 class="section-title">From design to dispatch</h2>
+                </div>
 
+                <div class="d-flex flex-column gap-5">
+                    <!-- Step 1 -->
+                    <div class="split">
+                        <div class="reveal">
+                            <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                                <!-- REPLACE IMAGE: step 1 design -->
+                                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=75"
+                                    alt="CAD and BIM design of formwork" loading="lazy" width="1200" height="900">
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <span class="eyebrow">Step 1 · CAD / BIM Designing</span>
+                            <h3 class="section-title">Precise 3D models &amp; layouts</h3>
+                            <p class="lead">We build 3D formwork models and layouts from your client blueprints, resolve
+                                clashes, and issue drawings for approval before any fabrication begins.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="split split--reverse">
+                        <div class="reveal">
+                            <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                                <!-- REPLACE IMAGE: step 2 welding -->
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=75"
+                                    alt="Precision welding of formwork panels" loading="lazy" width="1200" height="900">
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <span class="eyebrow">Step 2 · Precision Cutting &amp; Welding</span>
+                            <h3 class="section-title">Robotic &amp; manual fabrication</h3>
+                            <p class="lead">High-grade aluminium alloys are cut and welded to drawing — every panel
+                                carries a matching fabrication sheet through the line.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="split">
+                        <div class="reveal">
+                            <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                                <!-- REPLACE IMAGE: step 3 QC -->
+                                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=75"
+                                    alt="Quality inspection of finished panels" loading="lazy" width="1200"
+                                    height="900">
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <span class="eyebrow">Step 3 · Quality Inspection</span>
+                            <h3 class="section-title">Rigorous checking on every panel</h3>
+                            <p class="lead">Surface finish, hole positions, dimensions, welds and flatness — all checked
+                                before a panel is allowed to move to packing.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="split split--reverse">
+                        <div class="reveal">
+                            <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                                <!-- REPLACE IMAGE: step 4 packing -->
+                                <img src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1200&q=75"
+                                    alt="Packed and palletised formwork panels" loading="lazy" width="1200"
+                                    height="900">
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <span class="eyebrow">Step 4 · Packing &amp; Dispatch</span>
+                            <h3 class="section-title">Strapped and palletised for safe delivery</h3>
+                            <p class="lead">Panels are bundled, strapped and palletised with the right accessories so
+                                site installation can begin as soon as they are unloaded.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QC CHECKLIST -->
+        <section class="section section--dark">
+            <div class="container-tc">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <span class="eyebrow eyebrow--light">Quality Control</span>
+                        <h2 class="section-title section-title--light">A checklist that never leaves the building</h2>
+                        <p style="color:#AEB6BF;">Every panel is inspected against a written checklist before dispatch.
+                            If it doesn't pass, it doesn't ship.</p>
+                        <a href="contact.html" class="btn-tc btn-tc--ghost-light mt-2">Request QC Documentation <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="grid grid-2">
+                            <div class="reveal">
+                                <div class="card-tc"
+                                    style="padding:20px;background:var(--tc-graphite);border-color:rgba(255,255,255,.08);">
+                                    <i class="bi bi-check2-circle"
+                                        style="color:var(--tc-blue-light);font-size:1.3rem;"></i>
+                                    <h4 style="font-size:.95rem;margin:8px 0 4px;color:#fff;">Surface Finish</h4>
+                                    <p style="color:#AEB6BF;font-size:.85rem;margin:0;">Free from dents, scratches and
+                                        lacquer defects.</p>
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="card-tc"
+                                    style="padding:20px;background:var(--tc-graphite);border-color:rgba(255,255,255,.08);">
+                                    <i class="bi bi-check2-circle"
+                                        style="color:var(--tc-blue-light);font-size:1.3rem;"></i>
+                                    <h4 style="font-size:.95rem;margin:8px 0 4px;color:#fff;">Holes</h4>
+                                    <p style="color:#AEB6BF;font-size:.85rem;margin:0;">Position and diameter verified
+                                        against drawing.</p>
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="card-tc"
+                                    style="padding:20px;background:var(--tc-graphite);border-color:rgba(255,255,255,.08);">
+                                    <i class="bi bi-check2-circle"
+                                        style="color:var(--tc-blue-light);font-size:1.3rem;"></i>
+                                    <h4 style="font-size:.95rem;margin:8px 0 4px;color:#fff;">Dimensions</h4>
+                                    <p style="color:#AEB6BF;font-size:.85rem;margin:0;">Length, width and squareness
+                                        within tolerance.</p>
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="card-tc"
+                                    style="padding:20px;background:var(--tc-graphite);border-color:rgba(255,255,255,.08);">
+                                    <i class="bi bi-check2-circle"
+                                        style="color:var(--tc-blue-light);font-size:1.3rem;"></i>
+                                    <h4 style="font-size:.95rem;margin:8px 0 4px;color:#fff;">Welding</h4>
+                                    <p style="color:#AEB6BF;font-size:.85rem;margin:0;">Penetration, continuity and
+                                        finish checked.</p>
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="card-tc"
+                                    style="padding:20px;background:var(--tc-graphite);border-color:rgba(255,255,255,.08);">
+                                    <i class="bi bi-check2-circle"
+                                        style="color:var(--tc-blue-light);font-size:1.3rem;"></i>
+                                    <h4 style="font-size:.95rem;margin:8px 0 4px;color:#fff;">Flatness</h4>
+                                    <p style="color:#AEB6BF;font-size:.85rem;margin:0;">Straight-edge check for panel
+                                        flatness.</p>
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="card-tc"
+                                    style="padding:20px;background:var(--tc-graphite);border-color:rgba(255,255,255,.08);">
+                                    <i class="bi bi-check2-circle"
+                                        style="color:var(--tc-blue-light);font-size:1.3rem;"></i>
+                                    <h4 style="font-size:.95rem;margin:8px 0 4px;color:#fff;">Hardware</h4>
+                                    <p style="color:#AEB6BF;font-size:.85rem;margin:0;">Pins, wedges, brackets matched
+                                        to layout.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="section">
+            <div class="container-tc">
+                <div class="text-center mb-5 reveal">
+                    <span class="eyebrow">Gallery</span>
+                    <h2 class="section-title">Inside the plant</h2>
+                    <p class="lead mx-auto">Click any image to enlarge. Replace gallery images in <code>data.js</code> →
+                        <code>IMG.gallery</code>.</p>
+                </div>
+                <div class="grid grid-3" id="plantGallery">
+                    <!-- Populated by main.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PACKING & DISPATCH -->
+        <section class="section section--light">
+            <div class="container-tc">
+                <div class="split">
+                    <div class="reveal">
+                        <div class="img-wrap img-wrap--4x3 rounded-tc shadow-tc">
+                            <!-- REPLACE IMAGE: dispatch -->
+                            <img src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1200&q=75"
+                                alt="Packed pallets ready for dispatch" loading="lazy" width="1200" height="900">
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <span class="eyebrow">Dispatch</span>
+                        <h2 class="section-title">Packed to arrive exactly as it left</h2>
+                        <p class="lead">Panels are strapped and palletised, accessories packed alongside, and each
+                            consignment labelled so your site team can identify sets and start installation without
+                            delay.</p>
+                        <ul class="checklist mb-0">
+                            <li><i class="bi bi-check-circle-fill"></i><span>Strapped and palletised for safe
+                                    transport</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Accessories matched to each
+                                    consignment</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i><span>Labelling for easy identification on
+                                    site</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== PRE-FOOTER CTA + FOOTER + FLOATS ===== -->
     <section class="cta-band">
-        <div class="container-tc d-flex flex-wrap align-items-center justify-content-between gap-4">
-            <div>
-                <h2 class="mb-2">Want to visit our facility?</h2>
-                <p class="mb-0" style="color:#D7E4F5">Schedule a plant tour and see our QC process firsthand.</p>
+        <div class="container-tc">
+            <div class="cta-band__inner">
+                <div>
+                    <h2>Let's make your project drawings happen</h2>
+                    <p>Send us your floor plans, elevations and BOQ — we'll respond with layouts, quantity and lead
+                        time.</p>
+                </div>
+                <a href="contact.html" class="btn-tc btn-tc--lg">Get a Quote <i class="bi bi-arrow-right"></i></a>
             </div>
-            <a href="contact.html" class="btn-tc btn-light-tc">Schedule a Visit <i class="bi bi-arrow-right"></i></a>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="tc-footer">
         <div class="container-tc">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="f-logo-chip"><img src="assets/img/logo.png" alt="TopCraft logo" width="140" height="46">
+            <div class="tc-footer__grid">
+                <div>
+                    <div class="tc-footer__logo-chip" data-logo></div>
+                    <p data-config="tagline">Aluminium Formwork System</p>
+                    <p>We don't just build formwork; we provide speed and strength to the foundation of modern
+                        construction.</p>
+                    <div class="tc-footer__social">
+                        <a href="#" data-social="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" data-social="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" data-social="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" data-social="youtube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
-                    <p>Manufacturer, designer and supplier of high-quality aluminium formwork systems for residential,
-                        commercial and infrastructure projects across India.</p>
-                    <div class="social mt-3"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a
-                            href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#"
-                            aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="YouTube"><i
-                                class="bi bi-youtube"></i></a></div>
                 </div>
-                <div class="col-6 col-lg-2">
-                    <h5>Quick Links</h5>
-                    <ul class="f-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="why-topcraft.html">Why TopCraft</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="clients.html">Clients</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="tc-footer__links">
+                        <li><a href="about.html"><i class="bi bi-chevron-right"></i>About Us</a></li>
+                        <li><a href="why-topcraft.html"><i class="bi bi-chevron-right"></i>Why TopCraft</a></li>
+                        <li><a href="projects.html"><i class="bi bi-chevron-right"></i>Projects</a></li>
+                        <li><a href="clients.html"><i class="bi bi-chevron-right"></i>Clients</a></li>
+                        <li><a href="downloads.html"><i class="bi bi-chevron-right"></i>Downloads</a></li>
+                        <li><a href="privacy-policy.html"><i class="bi bi-chevron-right"></i>Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-3">
-                    <h5>Products</h5>
-                    <ul class="f-list">
-                        <li><a href="aluminium-formwork-system.html">Aluminium Formwork System</a></li>
-                        <li><a href="columns-beams.html">Columns & Beams</a></li>
-                        <li><a href="slab-deck-panels.html">Slab / Deck Panels</a></li>
-                        <li><a href="accessories.html">Accessories</a></li>
-                        <li><a href="extrusion-profiles.html">Extrusion Profiles</a></li>
-                        <li><a href="refurbishment.html">Refurbishment</a></li>
+                <div>
+                    <h4>Products</h4>
+                    <ul class="tc-footer__links">
+                        <li><a href="aluminium-formwork-system.html"><i class="bi bi-chevron-right"></i>Formwork
+                                System</a></li>
+                        <li><a href="columns-beams.html"><i class="bi bi-chevron-right"></i>Columns &amp; Beams</a></li>
+                        <li><a href="slab-deck-panels.html"><i class="bi bi-chevron-right"></i>Slab / Deck Panels</a>
+                        </li>
+                        <li><a href="accessories.html"><i class="bi bi-chevron-right"></i>Accessories</a></li>
+                        <li><a href="extrusion-profiles.html"><i class="bi bi-chevron-right"></i>Extrusion Profiles</a>
+                        </li>
+                        <li><a href="refurbishment.html"><i class="bi bi-chevron-right"></i>Refurbishment</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3">
-                    <h5>Contact</h5>
-                    <ul class="f-list">
-                        <li><i class="bi bi-geo-alt-fill"></i><span data-config="address">[Enter Office & Plant
+                <div>
+                    <h4>Solutions</h4>
+                    <ul class="tc-footer__links">
+                        <li><a href="residential.html"><i class="bi bi-chevron-right"></i>Residential</a></li>
+                        <li><a href="high-rise.html"><i class="bi bi-chevron-right"></i>High-Rise</a></li>
+                        <li><a href="commercial.html"><i class="bi bi-chevron-right"></i>Commercial</a></li>
+                        <li><a href="infrastructure.html"><i class="bi bi-chevron-right"></i>Infrastructure</a></li>
+                        <li><a href="solutions.html"><i class="bi bi-chevron-right"></i>All Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="tc-footer__contact">
+                        <li><i class="bi bi-geo-alt-fill"></i><span data-config="address">[Office &amp; Plant
                                 Address]</span></li>
-                        <li><i class="bi bi-telephone-fill"></i><a href="tel:+910000000000" data-config-href="phoneHref"
-                                data-config="phone">[Enter Phone]</a></li>
-                        <li><i class="bi bi-envelope-fill"></i><a href="mailto:email@example.com"
-                                data-config-href="email" data-config="email">[Enter Email]</a></li>
-                        <li><i class="bi bi-globe"></i><span data-config="website">[Enter Website]</span></li>
+                        <li><i class="bi bi-telephone-fill"></i><a href="tel:+" data-href="phone"
+                                data-config="phone">[Phone]</a></li>
+                        <li><i class="bi bi-envelope-fill"></i><a href="mailto:+" data-href="email"
+                                data-config="email">[Email]</a></li>
+                        <li><i class="bi bi-globe2"></i><a href="#" data-href="website"
+                                data-config="website">[Website]</a></li>
+                        <li><i class="bi bi-clock-fill"></i><span data-config="hours">Mon – Sat, 9:00 AM – 7:00 PM
+                                IST</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2"><span>© 2026 TopCraft Aluminium
-                    Formwork System Pvt. Ltd. All rights reserved.</span><span><a href="privacy-policy.html">Privacy
-                        Policy</a></span></div>
+            <div class="tc-footer__bottom">
+                <span>© <span data-config="year">2026</span> <span data-config="companyName">TopCraft Aluminium Formwork
+                        System Pvt. Ltd.</span></span>
+                <span>All rights reserved · <a href="privacy-policy.html">Privacy Policy</a></span>
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/919876543210" class="float-btn float-whatsapp" target="_blank" rel="noopener"
-        aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
-    <button class="float-btn float-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+    <a href="#" data-href="whatsapp" target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp"><i
+            class="bi bi-whatsapp"></i></a>
+    <button id="tcBackTop" class="float-top" aria-label="Back to top"><span></span><span></span><span></span></button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script>
+        // Manufacturing-page gallery (populated from IMG.gallery; GLightbox binds after load)
+        document.addEventListener("DOMContentLoaded", function () {
+            const wrap = document.getElementById("plantGallery");
+            if (!wrap || !window.IMG || !IMG.gallery) return;
+            wrap.innerHTML = IMG.gallery.map(function (src, i) {
+                return (
+                    '<a href="' + src + '" class="glightbox reveal card-tc" style="overflow:hidden;display:block;" data-gallery="plant">' +
+                    '<div class="img-wrap">' +
+                    '<img src="' + src + '" alt="TopCraft plant gallery image ' + (i + 1) + '" loading="lazy" width="600" height="375">' +
+                    '</div>' +
+                    '</a>'
+                );
+            }).join("");
+            // bind GLightbox after injection
+            if (window.GLightbox) {
+                GLightbox({ selector: ".glightbox" });
+            }
+            // trigger reveal
+            setTimeout(function () {
+                document.querySelectorAll("#plantGallery .reveal").forEach(function (el) {
+                    el.classList.add("is-visible");
+                });
+            }, 60);
+        });
+    </script>
 </body>
 
 </html>
